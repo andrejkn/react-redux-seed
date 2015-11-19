@@ -20,8 +20,6 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-@Radium
-@connect(mapStateToProps, mapDispatchToProps)
 class CounterApp extends Component {
   static propTypes = {
     counter: PropTypes.number.isRequired,
@@ -46,6 +44,7 @@ class CounterApp extends Component {
           counter={ counter }
           increment={ increment }
           decrement={ decrement }
+          reset={ reset }
         />
         <button type="button" onClick={ logout }>Logout</button>
       </div>
@@ -60,4 +59,6 @@ const styles = {
   },
 };
 
-export default CounterApp;
+export default Radium(
+  connect(mapStateToProps, mapDispatchToProps)(CounterApp)
+);

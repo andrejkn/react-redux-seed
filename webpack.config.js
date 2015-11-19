@@ -26,11 +26,12 @@ module.exports = {
       test: /\.css$/,
       loader: "style!css"
     }, {
+      /*
       test: /\.js$/,
       loaders: ['react-hot', 'babel-loader?stage=0', 'eslint-loader'],
       exclude: /node_modules/
     }, {
-      /*
+      **/
       test: /\.js$/,
       loader: 'react-hot',
       exclude: /node_modules/
@@ -41,14 +42,14 @@ module.exports = {
         // https://github.com/label/label-loader#options
         cacheDirectory: true,
         presets: ['react', 'stage-0', 'es2015'],
-        plugins: ['transform-class-properties']
+        plugins: ['transform-class-properties', 'transform-decorators']
       },
       exclude: /node_modules/
     }, {
       test: /\.js$/,
       loader: 'eslint-loader',
       exclude: /node_modules/
-    }, {*/
+    }, {
       test: /\.json$/,
       loader: 'json-loader'
     }, {

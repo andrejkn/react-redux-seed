@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions';
-import { INCREMENT_COUNTER, DECREMENT_COUNTER } from '../constants';
+import { INCREMENT_COUNTER, DECREMENT_COUNTER, RESET_COUNTER } from '../constants';
 import { fromJS } from 'immutable';
 
 const counterReducer = handleActions({

@@ -16,8 +16,6 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-@Radium
-@connect(mapStateToProps, mapDispatchToProps)
 class LoginPage extends Component {
   static propTypes = {
     attemptLogin: PropTypes.func.isRequired,
@@ -81,4 +79,6 @@ const styles = {
   },
 };
 
-export default LoginPage;
+export default Radium(
+  connect(mapStateToProps, mapDispatchToProps)(LoginPage)
+);
