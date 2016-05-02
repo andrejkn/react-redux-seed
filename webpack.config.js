@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const proxy = require('./server/webpack-dev-proxy');
-const styleLintPlugin = require('stylelint-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const SplitByPathPlugin = require('webpack-split-by-path');
 
 function getEntrySources(sources) {
@@ -20,7 +20,7 @@ const basePlugins = [
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
   }),
   new SplitByPathPlugin([
-    { name: 'vendor', path: [__dirname + '/node_modules/'] }
+    { name: 'vendor', path: [__dirname + '/node_modules/'] },
   ]),
   new HtmlWebpackPlugin({
     template: './src/index.html',
@@ -30,7 +30,7 @@ const basePlugins = [
 
 const devPlugins = [
   new webpack.NoErrorsPlugin(),
-  new styleLintPlugin({
+  new StyleLintPlugin({
     configFile: './.stylelintrc',
     files: ['src/**/*.css'],
     failOnError: false,
@@ -64,7 +64,7 @@ const postcssProdPlugins = [
   require('cssnano')({
     safe: true,
     sourcemap: true,
-    autoprefixer:false,
+    autoprefixer: false,
   }),
 ];
 

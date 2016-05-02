@@ -14,7 +14,7 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server -d --inline --hot --progress --no-info",
     "lint": "npm run lint-js && npm run lint-css",
     "lint-css": "stylelint './src/**/*.css'",
-    "lint-js": "eslint './src/**/*.js'",
+    "lint-js": "eslint '**/*.js' --ignore-path .gitignore",
     "postinstall": "npm run build",
     "start": "cross-env NODE_ENV=production node server/node-server.js",
     "pretest": "npm run clean && npm run lint",
