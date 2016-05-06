@@ -76,7 +76,7 @@
     "istanbul": "^1.0.0-alpha",
     "json-loader": "^0.5.3",
     "mocha": "^2.3.3",
-    "nyc": "^6.1.1",
+    "nyc": "^6.4.3",
     "postcss-cssnext": "^2.4.0",
     "postcss-import": "^8.0.2",
     "postcss-loader": "^0.9.1",
