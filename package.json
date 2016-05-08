@@ -78,7 +78,7 @@
     "mocha": "^2.3.3",
     "nyc": "^6.4.3",
     "postcss-cssnext": "^2.4.0",
-    "postcss-import": "^8.0.2",
+    "postcss-import": "^8.1.2",
     "postcss-loader": "^0.9.1",
     "postcss-modules-local-by-default": "^1.0.1",
     "react": "^15.0.1",
