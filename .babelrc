@@ -5,6 +5,9 @@
       "plugins": [
         ["__coverage__", { "ignore": "" }]
       ]
+    },
+    "production": {
+      "plugins": ["transform-react-inline-elements", "transform-react-constant-elements"]
     }
   }
 }
