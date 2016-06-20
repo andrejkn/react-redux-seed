@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const SplitByPathPlugin = require('webpack-split-by-path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const basePlugins = [
   new webpack.DefinePlugin({
@@ -16,6 +17,9 @@ const basePlugins = [
     inject: 'body',
   }),
   new webpack.NoErrorsPlugin(),
+  new CopyWebpackPlugin([
+    { from: 'src/assets', to: 'assets' },
+  ]),
 ];
 
 const devPlugins = [
